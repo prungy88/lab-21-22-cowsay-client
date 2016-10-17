@@ -17,7 +17,7 @@
  * create a `watch` npm script for running `webpack-dev-server --inline --hot`
  * create a `lint` npm script to lint your javscript code using eslint
 * include a webpack.config.js
- * must output budndle.js and index.html into a **build** directy
+ * must output budndle.js and index.html into a **build** dir
  * must have a sass loader config
 
 # Requirements 

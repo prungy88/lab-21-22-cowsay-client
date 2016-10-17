@@ -14,12 +14,10 @@
 * include a .gitignore
  * **ignore the build directory**
 * include a package.json
-* include a webpack.config.js
-* create a package.json that lists all your developer dependencies
  * create a `watch` npm script for running `webpack-dev-server --inline --hot`
  * create a `lint` npm script to lint your javscript code using eslint
-* create a wepack config file
- * must output files into a build directy
+* include a webpack.config.js
+ * must output budndle.js and index.html into a **build** directy
  * must have a sass loader config
 
 # Requirements 

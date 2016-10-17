@@ -22,8 +22,8 @@
 
 # Requirements 
 * Create these directories to organize your code: 
- * html
- * scss
+ * app/html
+ * app/scss
 * create a **app/scss/base.scss** file 
  * write some styles that use the color variables
 * create a**app/index.html** 

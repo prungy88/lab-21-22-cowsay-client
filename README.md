@@ -20,7 +20,7 @@
  * create a `lint` npm script to lint your javscript code using eslint
 * create a wepack config file
  * must output files into a build directy
- * must have a sass loader config, that uses the `extract-text-webpack-plugin`
+ * must have a sass loader config
 
 # Requirements 
 * Create these directories to organize your code: 

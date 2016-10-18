@@ -14,16 +14,15 @@ demoApp.controller('CowsayController', ['$log', '$scope', CowsayController]);
 function CowsayController($log, $scope){
   $log.debug('init CowsayController');
   let cowsayCtrl = $scope.cowsayCtrl = {};
-  cowsayCtrl.title = 'Dumb fucking cow';
+  cowsayCtrl.title = 'I AM A SMART COW';
 
   cowsayCtrl.updateCow = function(input){
     $log.debug('cowsayCtrl.updateCow()');
-    return '\n' + cowsay.say({text: input || 'gimme something to say'});
+    return '\n' + cowsay.say({text: input || 'was soll ich sagen?'});
   };
 
   cowsayCtrl.helloClick = function(input){
     $log.debug('cowsayCtrl.helloClick()');
-    $log.log(input);
     cowsayCtrl.poopulate = cowsayCtrl.updateCow(input);
   };
 

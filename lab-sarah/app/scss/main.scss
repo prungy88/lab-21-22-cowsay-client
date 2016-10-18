@@ -1,5 +1,10 @@
-$app-bg: #7affa7;
+$app-bg: #7a7aff;
+
 
 body {
   background-color: $app-bg;
+}
+
+h1, pre {
+  text-align: center;
 }

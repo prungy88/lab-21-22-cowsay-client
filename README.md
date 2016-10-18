@@ -20,13 +20,13 @@
  * must output budndle.js and index.html into a **build** dir
  * must have a sass loader config
 
-# Requirements 
-* Create these directories to organize your code: 
+# Requirements
+* Create these directories to organize your code:
  * app/html
  * app/scss
-* create a **app/scss/base.scss** file 
+* create a **app/scss/base.scss** file
  * write some styles that use the color variables
-* create a**app/index.html** 
+* create a**app/index.html**
   * make sure to have the `ng-app` atribute pointing to your default angular module
 * create a **app/entry.js**
  * require your **app/scss/base.scss**
@@ -42,8 +42,6 @@
 * **1pt** add a third button that uses the `ng-click` directive
  * whenever this button is clicked it should reset the second pretag with the content it last showed
 * **1pt** add a select menu that uses the `ng-repeat` directive (read the docs)
- * use the `ng-repeat` to populate the select menu with the names of all cowsay files 
+ * use the `ng-repeat` to populate the select menu with the names of all cowsay files
  * *hint:* `cowsay.list(list => {})`
  * when a cowsay filename is selected from the menu, have the first pre tag use that cowfile
-
-

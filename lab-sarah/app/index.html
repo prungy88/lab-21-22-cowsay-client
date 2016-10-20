@@ -4,7 +4,6 @@
     <title> Cowsay Client </title>
   </head>
   <body>
-    <i class="fa fa-star-half-o"></i>
     <nav ng-controller="NavController as navCtrl">
       <ul>
         <li ng-repeat="navItem in navCtrl.routes">
@@ -15,7 +14,11 @@
     <!-- //binds the scope of the controller to the inside of this section -->
     <!-- everytime you call ng-controller it instantiates the controller -->
     <section ng-controller="CowsayController as cowsayCtrl" ng-init="cowsayCtrl.currentCow = 'daemon'">
+      <div id="header">
+    <i class="fa fa-star-half-o"></i>
     <h1> {{cowsayCtrl.title}} </h1>
+    <i class="fa fa-star-half-o"></i>
+    </div>
     <form ng-submit="cowsayCtrl.speak(cowsayCtrl.text)" novalidate name="cowsayForm" ng-class="{'app-red-border': cowsayForm.$invalid}">
       <input ng-class="{'app-orange-bg': !cowsayCtrl.text}" type="text" ng-model="cowsayCtrl.text" required ng-minlength="5" ng-maxlength="20">
       <select ng-model="cowsayCtrl.currentCow">

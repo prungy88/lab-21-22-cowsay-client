@@ -1,10 +1,36 @@
-$app-bg: #7a7aff;
+@import "~font-awesome/scss/font-awesome.scss";
+
+$app-purple: #7a7aff;
+$app-green: #77ffaa;
+$app-orange: #FF7F5F;
 
 
 body {
-  background-color: $app-bg;
+  background-color: $app-purple;
+  text-align: center;
 }
 
-h1, pre {
-  text-align: center;
+.app-green-border {
+  border: 8px solid green;
+}
+
+.app-red-border input {
+  border: 8px solid red;
+}
+
+.app-orange-bg {
+  background-color: $app-orange;
+}
+
+.app-green-bg {
+  background-color: $app-green;
+}
+
+a {
+  text-decoration: none;
+  color: $app-green;
+}
+
+ul {
+  list-style: none;
 }

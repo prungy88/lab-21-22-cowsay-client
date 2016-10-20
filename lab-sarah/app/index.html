@@ -4,16 +4,36 @@
     <title> Cowsay Client </title>
   </head>
   <body>
-    <section ng-controller="CowsayController">
+    <i class="fa fa-star-half-o"></i>
+    <nav ng-controller="NavController as navCtrl">
+      <ul>
+        <li ng-repeat="navItem in navCtrl.routes">
+          <a ng-href="{{navItem.url}}">{{navItem.name}} </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- //binds the scope of the controller to the inside of this section -->
+    <!-- everytime you call ng-controller it instantiates the controller -->
+    <section ng-controller="CowsayController as cowsayCtrl" ng-init="cowsayCtrl.currentCow = 'daemon'">
     <h1> {{cowsayCtrl.title}} </h1>
-      <input type="text" ng-model="cowsayCtrl.text">
-      <button ng-click="cowsayCtrl.helloClick(cowsayCtrl.text)"> SO MANY COWS </button>
-      <pre>
-        {{cowsayCtrl.updateCow(cowsayCtrl.text)}}
-      </pre>
-      <pre>
-        {{cowsayCtrl.poopulate}}
-      </pre>
+    <form ng-submit="cowsayCtrl.speak(cowsayCtrl.text)" novalidate name="cowsayForm" ng-class="{'app-red-border': cowsayForm.$invalid}">
+      <input ng-class="{'app-orange-bg': !cowsayCtrl.text}" type="text" ng-model="cowsayCtrl.text" required ng-minlength="5" ng-maxlength="20">
+      <select ng-model="cowsayCtrl.currentCow">
+        <option ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{cowfile}}"> {{cowfile}}
+        </option>
+      </select>
+      <button ng-class="{'app-orange-bg': cowsayForm.$invalid}" type="button" ng-click="cowsayCtrl.undo()">Undo</button>
+      <button ng-class="{'app-green-bg': !cowsayForm.$invalid}" type="submit"> Speak</button>
+    </form>
+
+    <p ng-hide="!cowsayCtrl.undone">You pressed undo at some point</p>
+    <p ng-if="!cowsayCtrl.spoken">What do you want to be said?</p>
+
+    <pre>
+      {{cowsayCtrl.updateCow(cowsayCtrl.text)}}
+    </pre>
+
+    <pre ng-show="cowsayCtrl.spoken">{{cowsayCtrl.spoken}}</pre>
     </section>
 
   </body>

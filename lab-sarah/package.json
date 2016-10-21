@@ -24,6 +24,7 @@
     "font-awesome": "^4.6.3",
     "html-webpack-plugin": "^2.22.0",
     "node-sass": "^3.10.1",
+    "resolve-url": "^0.2.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

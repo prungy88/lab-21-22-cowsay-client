@@ -3,21 +3,19 @@
 const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const plugins = [
-  new HTMLPlugin({
-    template: `${__dirname}/app/index.html`,
-  }),
-  new ExtractTextPlugin('bundle.css'),
-];
-
 module.exports = {
   entry: `${__dirname}/app/entry.js`,
   //dev tool allows you to see where the error happened
   devtool: 'eval',
-  plugins,
+  plugins: [
+    new HTMLPlugin({
+      template: `${__dirname}/app/index.html`,
+    }),
+    new ExtractTextPlugin('bundle.css'),
+  ],
   output: {
-    path: 'build',
     filename: 'bundle.js',
+    path: 'build',
   },
   sassLoader: {
     includePaths: [`${__dirname}/app/scss/lib`],

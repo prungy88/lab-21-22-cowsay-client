@@ -7,16 +7,16 @@ module.exports = {
   entry: `${__dirname}/app/entry.js`,
   //dev tool allows you to see where the error happened
   devtool: 'eval',
+  output: {
+    filename: 'bundle.js',
+    path: 'build',
+  },
   plugins: [
     new HTMLPlugin({
       template: `${__dirname}/app/index.html`,
     }),
     new ExtractTextPlugin('bundle.css'),
   ],
-  output: {
-    filename: 'bundle.js',
-    path: 'build',
-  },
   sassLoader: {
     includePaths: [`${__dirname}/app/scss/lib`],
   },

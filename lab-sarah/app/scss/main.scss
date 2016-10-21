@@ -1,4 +1,8 @@
+
 @import "~font-awesome/scss/font-awesome.scss";
+//you can import _vender and _theme without absolute paths, because you have includPaths thing in webpack.config.js
+@import "_vendor";
+@import "_theme";
 
 $app-purple: #7a7aff;
 $app-green: #77ffaa;
@@ -8,6 +12,20 @@ $app-orange: #FF7F5F;
 body {
   background-color: $app-purple;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $app-green;
+}
+
+ul {
+  list-style: none;
+}
+
+
+i {
+  margin: 25px 5px;
 }
 
 .app-green-border {
@@ -26,21 +44,8 @@ body {
   background-color: $app-green;
 }
 
-a {
-  text-decoration: none;
-  color: $app-green;
-}
-
-ul {
-  list-style: none;
-}
-
 #header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-i {
-  margin: 25px 5px;
 }

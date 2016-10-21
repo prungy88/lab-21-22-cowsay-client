@@ -12,6 +12,7 @@ const plugins = [
 
 module.exports = {
   entry: `${__dirname}/app/entry.js`,
+  //dev tool allows you to see where the error happened
   devtool: 'eval',
   plugins,
   output: {
